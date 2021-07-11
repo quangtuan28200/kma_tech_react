@@ -1,0 +1,122 @@
+.home{
+    background-image: url(../../../assets/imgs/backgrounds/bgadminhome.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.header__container{
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.header__wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.header_name{
+    display: inline-block;
+}
+
+.header_name a{
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 20px 20px 20px 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.header__user{
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header__user::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    top: 100%;
+}
+
+.header__user:hover .header__userMenu{
+    display: block;
+}
+
+.header__userLink{
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.header__user:hover .header__userLink{
+    opacity: 90%;
+}
+
+.header__user i{
+    font-size: 28px;
+    margin-right: 8px;
+}
+
+.header__userMenu{
+    z-index: 20;
+    position: absolute;
+    top: 128%;
+    right: 0;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    width: 254px;
+    border-radius: 2px;
+    box-shadow: 0 0 3px #ccc;
+    /* animation */
+    transform-origin: calc(100% - 20px)top;
+    animation: growth ease 0.2s;
+    will-change: opacity, transform;
+    display: none;
+}
+
+.header__userMenu::before{
+    z-index: 3;
+    content: "";
+    border-width: 10px 15px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+    position: absolute;
+    top: -20px;
+    right: 10px;
+}
+
+.header__userItem{
+   list-style-type: none;
+}
+
+.header__userItem:hover{
+    background-color: #e4dede4d;
+}
+
+.header__userItem a:hover{
+    color: var(--subTheme_color);
+}
+
+.header__userItem:last-child{
+    border-top: 1px solid #ddd;
+}
+
+.header__userItem:last-child a:hover{
+    color: var(--red);
+}
+
+.userItem__Link{
+    display: block;
+    text-decoration: none;
+    color: var(--textColor);
+    font-weight: 500;
+    padding: 10px 16px;
+}
