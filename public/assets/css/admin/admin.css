@@ -5,9 +5,12 @@
 }
 
 .header__container{
-    width: 100%;
     position: fixed;
-    z-index: 100;
+}
+
+.header__containerMn{
+    background-color: #484848;
+    position: unset;
 }
 
 .header__wrap{
